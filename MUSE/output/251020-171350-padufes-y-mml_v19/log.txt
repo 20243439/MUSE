@@ -1,0 +1,302 @@
+dataset: padufes
+task: y
+monitor: auc_macro_ovo
+dev: True
+load_no_label: False
+embedding_size: 128
+code_pretrained_embedding: True
+code_layers: 2
+code_heads: 2
+bert_type: prajjwal1/bert-tiny
+rnn_layers: 1
+rnn_type: GRU
+rnn_bidirectional: False
+ffn_layers: 2
+gnn_layers: 2
+gnn_norm: None
+dropout: 0.3
+epochs: 10
+batch_size: 16
+lr: 0.0001
+weight_decay: 1e-05
+monitor_criterion: max
+seed: 42
+checkpoint: None
+no_train: False
+note: mml_v19
+exp_name_attr: ['dataset', 'task', 'note']
+official_run: True
+no_cuda: False
+log_mode: minimal
+eval_every: 1
+exp_name: 251020-171350-padufes-y-mml_v19
+device: cuda
+Number of parameters: 24018374
+Run summary: model=PADUFESBackbone dataset=padufes task=y epochs=10 batch_size=16 params=24018374
+-------train: 0-------
+metrics/train/loss: 6.476618304848671
+Save checkpoint to: C:/Users/user/Desktop/楷备\MUSE\output/251020-171350-padufes-y-mml_v19\models\last.ckpt
+-------val: 0-------
+metrics/val/acc: 0.38271604938271603
+metrics/val/auc_macro_ovo: 0.30753676865271073
+metrics/val/auc_macro_ovr: 0.3210008475929622
+metrics/val/auc_weighted_ovo: 0.31131719175563116
+metrics/val/auc_weighted_ovr: 0.3753986985078138
+metrics/val/bacc: 0.1562962962962963
+metrics/val/f1_macro: 0.10551415797317437
+metrics/val/f1_micro: 0.38271604938271603
+metrics/val/f1_weighted: 0.256338736484456
+New best auc_macro_ovo score (0.3075)
+Save checkpoint to: C:/Users/user/Desktop/楷备\MUSE\output/251020-171350-padufes-y-mml_v19\models\best.ckpt
+-------test: 0-------
+metrics/test/acc: 0.41434262948207173
+metrics/test/auc_macro_ovo: 0.32299967226144766
+metrics/test/auc_macro_ovr: 0.32846847221268793
+metrics/test/auc_weighted_ovo: 0.3218733972621968
+metrics/test/auc_weighted_ovr: 0.340503927809791
+metrics/test/bacc: 0.17020917678812417
+metrics/test/f1_macro: 0.122110810476241
+metrics/test/f1_micro: 0.41434262948207173
+metrics/test/f1_weighted: 0.2926017823765683
+-------train: 1-------
+metrics/train/loss: 4.757208123803139
+Save checkpoint to: C:/Users/user/Desktop/楷备\MUSE\output/251020-171350-padufes-y-mml_v19\models\last.ckpt
+-------val: 1-------
+metrics/val/acc: 0.4074074074074074
+metrics/val/auc_macro_ovo: 0.38110484182098764
+metrics/val/auc_macro_ovr: 0.3762267739134935
+metrics/val/auc_weighted_ovo: 0.36947648158088314
+metrics/val/auc_weighted_ovr: 0.402294168659387
+metrics/val/bacc: 0.165
+metrics/val/f1_macro: 0.09939759036144578
+metrics/val/f1_micro: 0.4074074074074074
+metrics/val/f1_weighted: 0.24542614904060686
+New best auc_macro_ovo score (0.3811)
+Save checkpoint to: C:/Users/user/Desktop/楷备\MUSE\output/251020-171350-padufes-y-mml_v19\models\best.ckpt
+-------test: 1-------
+metrics/test/acc: 0.40239043824701193
+metrics/test/auc_macro_ovo: 0.4136798705597968
+metrics/test/auc_macro_ovr: 0.40071061550524306
+metrics/test/auc_weighted_ovo: 0.3743606690607362
+metrics/test/auc_weighted_ovr: 0.3767404484388479
+metrics/test/bacc: 0.16185897435897437
+metrics/test/f1_macro: 0.10049751243781095
+metrics/test/f1_micro: 0.40239043824701193
+metrics/test/f1_weighted: 0.24984242135933876
+-------train: 2-------
+metrics/train/loss: 4.40901168435812
+Save checkpoint to: C:/Users/user/Desktop/楷备\MUSE\output/251020-171350-padufes-y-mml_v19\models\last.ckpt
+-------val: 2-------
+metrics/val/acc: 0.411522633744856
+metrics/val/auc_macro_ovo: 0.49464831588835206
+metrics/val/auc_macro_ovr: 0.4881611878941987
+metrics/val/auc_weighted_ovo: 0.47626434365121967
+metrics/val/auc_weighted_ovr: 0.4828706282896273
+metrics/val/bacc: 0.16666666666666666
+metrics/val/f1_macro: 0.09718172983479106
+metrics/val/f1_micro: 0.411522633744856
+metrics/val/f1_weighted: 0.23995488848096558
+New best auc_macro_ovo score (0.4946)
+Save checkpoint to: C:/Users/user/Desktop/楷备\MUSE\output/251020-171350-padufes-y-mml_v19\models\best.ckpt
+-------test: 2-------
+metrics/test/acc: 0.41434262948207173
+metrics/test/auc_macro_ovo: 0.48320667997179245
+metrics/test/auc_macro_ovr: 0.48628554941290075
+metrics/test/auc_weighted_ovo: 0.47017190331686354
+metrics/test/auc_weighted_ovr: 0.46439139368781185
+metrics/test/bacc: 0.16666666666666666
+metrics/test/f1_macro: 0.09765258215962441
+metrics/test/f1_micro: 0.41434262948207173
+metrics/test/f1_weighted: 0.24276976600639694
+-------train: 3-------
+metrics/train/loss: 3.8894930109381676
+Save checkpoint to: C:/Users/user/Desktop/楷备\MUSE\output/251020-171350-padufes-y-mml_v19\models\last.ckpt
+-------val: 3-------
+metrics/val/acc: 0.345679012345679
+metrics/val/auc_macro_ovo: 0.45425319545088577
+metrics/val/auc_macro_ovr: 0.4432355820241487
+metrics/val/auc_weighted_ovo: 0.44223296256535666
+metrics/val/auc_weighted_ovr: 0.473578866590728
+metrics/val/bacc: 0.15101851851851852
+metrics/val/f1_macro: 0.12169826182849341
+metrics/val/f1_micro: 0.345679012345679
+metrics/val/f1_weighted: 0.27189321805599587
+-------test: 3-------
+metrics/test/acc: 0.3745019920318725
+metrics/test/auc_macro_ovo: 0.46644914995331344
+metrics/test/auc_macro_ovr: 0.45176543085574256
+metrics/test/auc_weighted_ovo: 0.44024990527955793
+metrics/test/auc_weighted_ovr: 0.4408855000661605
+metrics/test/bacc: 0.1636302294197031
+metrics/test/f1_macro: 0.13468817518722484
+metrics/test/f1_micro: 0.3745019920318725
+metrics/test/f1_weighted: 0.3002763544972117
+-------train: 4-------
+metrics/train/loss: 3.545810267329216
+Save checkpoint to: C:/Users/user/Desktop/楷备\MUSE\output/251020-171350-padufes-y-mml_v19\models\last.ckpt
+-------val: 4-------
+metrics/val/acc: 0.411522633744856
+metrics/val/auc_macro_ovo: 0.5013989868491681
+metrics/val/auc_macro_ovr: 0.48957582600750466
+metrics/val/auc_weighted_ovo: 0.482157298065645
+metrics/val/auc_weighted_ovr: 0.4705194080439943
+metrics/val/bacc: 0.16666666666666666
+metrics/val/f1_macro: 0.09718172983479106
+metrics/val/f1_micro: 0.411522633744856
+metrics/val/f1_weighted: 0.23995488848096558
+New best auc_macro_ovo score (0.5014)
+Save checkpoint to: C:/Users/user/Desktop/楷备\MUSE\output/251020-171350-padufes-y-mml_v19\models\best.ckpt
+-------test: 4-------
+metrics/test/acc: 0.41434262948207173
+metrics/test/auc_macro_ovo: 0.5124033141842383
+metrics/test/auc_macro_ovr: 0.5025655444640892
+metrics/test/auc_weighted_ovo: 0.49243584776074967
+metrics/test/auc_weighted_ovr: 0.47406990019495643
+metrics/test/bacc: 0.16666666666666666
+metrics/test/f1_macro: 0.09765258215962441
+metrics/test/f1_micro: 0.41434262948207173
+metrics/test/f1_weighted: 0.24276976600639694
+-------train: 5-------
+metrics/train/loss: 3.1739618480205536
+Save checkpoint to: C:/Users/user/Desktop/楷备\MUSE\output/251020-171350-padufes-y-mml_v19\models\last.ckpt
+-------val: 5-------
+metrics/val/acc: 0.411522633744856
+metrics/val/auc_macro_ovo: 0.5173838399087494
+metrics/val/auc_macro_ovr: 0.514170168634947
+metrics/val/auc_weighted_ovo: 0.5126927571022446
+metrics/val/auc_weighted_ovr: 0.507735271963556
+metrics/val/bacc: 0.16666666666666666
+metrics/val/f1_macro: 0.09718172983479106
+metrics/val/f1_micro: 0.411522633744856
+metrics/val/f1_weighted: 0.23995488848096558
+New best auc_macro_ovo score (0.5174)
+Save checkpoint to: C:/Users/user/Desktop/楷备\MUSE\output/251020-171350-padufes-y-mml_v19\models\best.ckpt
+-------test: 5-------
+metrics/test/acc: 0.41434262948207173
+metrics/test/auc_macro_ovo: 0.5111820993992683
+metrics/test/auc_macro_ovr: 0.50381495156171
+metrics/test/auc_weighted_ovo: 0.5037701859346632
+metrics/test/auc_weighted_ovr: 0.5050259722879736
+metrics/test/bacc: 0.16666666666666666
+metrics/test/f1_macro: 0.09765258215962441
+metrics/test/f1_micro: 0.41434262948207173
+metrics/test/f1_weighted: 0.24276976600639694
+-------train: 6-------
+metrics/train/loss: 2.95810803771019
+Save checkpoint to: C:/Users/user/Desktop/楷备\MUSE\output/251020-171350-padufes-y-mml_v19\models\last.ckpt
+-------val: 6-------
+metrics/val/acc: 0.411522633744856
+metrics/val/auc_macro_ovo: 0.5670226365405261
+metrics/val/auc_macro_ovr: 0.5768412201181712
+metrics/val/auc_weighted_ovo: 0.5688555247410588
+metrics/val/auc_weighted_ovr: 0.5336489836978342
+metrics/val/bacc: 0.16666666666666666
+metrics/val/f1_macro: 0.09718172983479106
+metrics/val/f1_micro: 0.411522633744856
+metrics/val/f1_weighted: 0.23995488848096558
+New best auc_macro_ovo score (0.5670)
+Save checkpoint to: C:/Users/user/Desktop/楷备\MUSE\output/251020-171350-padufes-y-mml_v19\models\best.ckpt
+-------test: 6-------
+metrics/test/acc: 0.41434262948207173
+metrics/test/auc_macro_ovo: 0.537518659230139
+metrics/test/auc_macro_ovr: 0.5390073552197266
+metrics/test/auc_weighted_ovo: 0.5362515527542149
+metrics/test/auc_weighted_ovr: 0.5303591704051036
+metrics/test/bacc: 0.16666666666666666
+metrics/test/f1_macro: 0.09765258215962441
+metrics/test/f1_micro: 0.41434262948207173
+metrics/test/f1_weighted: 0.24276976600639694
+-------train: 7-------
+metrics/train/loss: 2.8968086317181587
+Save checkpoint to: C:/Users/user/Desktop/楷备\MUSE\output/251020-171350-padufes-y-mml_v19\models\last.ckpt
+-------val: 7-------
+metrics/val/acc: 0.411522633744856
+metrics/val/auc_macro_ovo: 0.5512836235238863
+metrics/val/auc_macro_ovr: 0.5619773960541602
+metrics/val/auc_weighted_ovo: 0.5605125395121371
+metrics/val/auc_weighted_ovr: 0.5451658514447394
+metrics/val/bacc: 0.16666666666666666
+metrics/val/f1_macro: 0.09718172983479106
+metrics/val/f1_micro: 0.411522633744856
+metrics/val/f1_weighted: 0.23995488848096558
+-------test: 7-------
+metrics/test/acc: 0.41434262948207173
+metrics/test/auc_macro_ovo: 0.530449493492495
+metrics/test/auc_macro_ovr: 0.5308122817938555
+metrics/test/auc_weighted_ovo: 0.5343914682693207
+metrics/test/auc_weighted_ovr: 0.5437621532899031
+metrics/test/bacc: 0.16666666666666666
+metrics/test/f1_macro: 0.09765258215962441
+metrics/test/f1_micro: 0.41434262948207173
+metrics/test/f1_weighted: 0.24276976600639694
+-------train: 8-------
+metrics/train/loss: 2.732943333685398
+Save checkpoint to: C:/Users/user/Desktop/楷备\MUSE\output/251020-171350-padufes-y-mml_v19\models\last.ckpt
+-------val: 8-------
+metrics/val/acc: 0.411522633744856
+metrics/val/auc_macro_ovo: 0.6016976650563607
+metrics/val/auc_macro_ovr: 0.6270041955130132
+metrics/val/auc_weighted_ovo: 0.6234012643883821
+metrics/val/auc_weighted_ovr: 0.5859579477744074
+metrics/val/bacc: 0.16666666666666666
+metrics/val/f1_macro: 0.09718172983479106
+metrics/val/f1_micro: 0.411522633744856
+metrics/val/f1_weighted: 0.23995488848096558
+New best auc_macro_ovo score (0.6017)
+Save checkpoint to: C:/Users/user/Desktop/楷备\MUSE\output/251020-171350-padufes-y-mml_v19\models\best.ckpt
+-------test: 8-------
+metrics/test/acc: 0.41434262948207173
+metrics/test/auc_macro_ovo: 0.5797725560546562
+metrics/test/auc_macro_ovr: 0.5979311364858644
+metrics/test/auc_weighted_ovo: 0.6010050076250381
+metrics/test/auc_weighted_ovr: 0.5924411467712141
+metrics/test/bacc: 0.16666666666666666
+metrics/test/f1_macro: 0.09765258215962441
+metrics/test/f1_micro: 0.41434262948207173
+metrics/test/f1_weighted: 0.24276976600639694
+-------train: 9-------
+metrics/train/loss: 2.7100282683968544
+Save checkpoint to: C:/Users/user/Desktop/楷备\MUSE\output/251020-171350-padufes-y-mml_v19\models\last.ckpt
+-------val: 9-------
+metrics/val/acc: 0.411522633744856
+metrics/val/auc_macro_ovo: 0.6347498154857758
+metrics/val/auc_macro_ovr: 0.6671020994279061
+metrics/val/auc_weighted_ovo: 0.6653096633267728
+metrics/val/auc_weighted_ovr: 0.6172580807526411
+metrics/val/bacc: 0.16666666666666666
+metrics/val/f1_macro: 0.09718172983479106
+metrics/val/f1_micro: 0.411522633744856
+metrics/val/f1_weighted: 0.23995488848096558
+New best auc_macro_ovo score (0.6347)
+Save checkpoint to: C:/Users/user/Desktop/楷备\MUSE\output/251020-171350-padufes-y-mml_v19\models\best.ckpt
+-------test: 9-------
+metrics/test/acc: 0.41434262948207173
+metrics/test/auc_macro_ovo: 0.5960258596991054
+metrics/test/auc_macro_ovr: 0.6185674154110616
+metrics/test/auc_weighted_ovo: 0.6285942448074926
+metrics/test/auc_weighted_ovr: 0.6375806908783394
+metrics/test/bacc: 0.16666666666666666
+metrics/test/f1_macro: 0.09765258215962441
+metrics/test/f1_micro: 0.41434262948207173
+metrics/test/f1_weighted: 0.24276976600639694
+Load checkpoint from: C:/Users/user/Desktop/楷备\MUSE\output/251020-171350-padufes-y-mml_v19\models\best.ckpt
+-------final test-------
+metrics/final_test/acc: 0.41538645418326675
+metrics/final_test/acc_std: 0.030589037436349
+metrics/final_test/auc_macro_ovo: 0.5941782135787925
+metrics/final_test/auc_macro_ovo_std: 0.0251868939524822
+metrics/final_test/auc_macro_ovr: 0.6161356746157126
+metrics/final_test/auc_macro_ovr_std: 0.028945727100694374
+metrics/final_test/auc_weighted_ovo: 0.6262458363776441
+metrics/final_test/auc_weighted_ovo_std: 0.028964526990809494
+metrics/final_test/auc_weighted_ovr: 0.6362524290162279
+metrics/final_test/auc_weighted_ovr_std: 0.02222017282405349
+metrics/final_test/bacc: 0.16666666666666663
+metrics/final_test/bacc_std: 2.7755575615628914e-17
+metrics/final_test/f1_macro: 0.09771607248478292
+metrics/final_test/f1_macro_std: 0.00510696721207114
+metrics/final_test/f1_micro: 0.41538645418326675
+metrics/final_test/f1_micro_std: 0.030589037436349
+metrics/final_test/f1_weighted: 0.2444764734578363
+metrics/final_test/f1_weighted_std: 0.03056422597790006
+Save predictions to: C:/Users/user/Desktop/楷备\MUSE\output/251020-171350-padufes-y-mml_v19\predictions.txt

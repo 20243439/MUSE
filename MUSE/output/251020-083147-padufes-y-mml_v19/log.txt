@@ -1,0 +1,36 @@
+dataset: padufes
+task: y
+monitor: auc_macro_ovo
+dev: True
+load_no_label: False
+embedding_size: 128
+code_pretrained_embedding: True
+code_layers: 2
+code_heads: 2
+bert_type: prajjwal1/bert-tiny
+rnn_layers: 1
+rnn_type: GRU
+rnn_bidirectional: False
+ffn_layers: 2
+gnn_layers: 2
+gnn_norm: None
+dropout: 0.25
+epochs: 1
+batch_size: 8
+lr: 0.0002
+weight_decay: 0
+monitor_criterion: max
+seed: 42
+checkpoint: None
+no_train: False
+note: mml_v19
+exp_name_attr: ['dataset', 'task', 'note']
+official_run: True
+no_cuda: False
+log_mode: minimal
+eval_every: 10
+exp_name: 251020-083147-padufes-y-mml_v19
+device: cuda
+Number of parameters: 24018374
+Run summary: model=PADUFESBackbone dataset=padufes task=y epochs=1 batch_size=8 params=24018374
+-------train: 0-------

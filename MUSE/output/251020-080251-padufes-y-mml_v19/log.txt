@@ -1,0 +1,102 @@
+dataset: padufes
+task: y
+monitor: auc_macro_ovo
+dev: True
+load_no_label: False
+embedding_size: 128
+code_pretrained_embedding: True
+code_layers: 2
+code_heads: 2
+bert_type: prajjwal1/bert-tiny
+rnn_layers: 1
+rnn_type: GRU
+rnn_bidirectional: False
+ffn_layers: 2
+gnn_layers: 2
+gnn_norm: None
+dropout: 0.25
+epochs: 1
+eval_every: 10
+batch_size: 8
+lr: 0.0002
+weight_decay: 0
+monitor_criterion: max
+seed: 42
+checkpoint: None
+no_train: False
+note: mml_v19
+exp_name_attr: ['dataset', 'task', 'note']
+official_run: True
+no_cuda: False
+exp_name: 251020-080251-padufes-y-mml_v19
+device: cuda
+dataset: padufes
+task: y
+monitor: auc_macro_ovo
+dev: True
+load_no_label: False
+embedding_size: 128
+code_pretrained_embedding: True
+code_layers: 2
+code_heads: 2
+bert_type: prajjwal1/bert-tiny
+rnn_layers: 1
+rnn_type: GRU
+rnn_bidirectional: False
+ffn_layers: 2
+gnn_layers: 2
+gnn_norm: None
+dropout: 0.25
+epochs: 1
+eval_every: 10
+batch_size: 8
+lr: 0.0002
+weight_decay: 0
+monitor_criterion: max
+seed: 42
+checkpoint: None
+no_train: False
+note: mml_v19
+exp_name_attr: ['dataset', 'task', 'note']
+official_run: True
+no_cuda: False
+exp_name: 251020-080251-padufes-y-mml_v19
+device: cuda
+Model: MMLBackbone with 24,018,374 params
+Number of parameters: 24018374
+-------train: 0-------
+metrics/train/loss: 4.779103450477123
+Save checkpoint to: C:/Users/user/Desktop/楷备\MUSE\output/251020-080251-padufes-y-mml_v19\models\last.ckpt
+-------val: 0-------
+metrics/val/acc: 0.411522633744856
+metrics/val/auc_macro_ovo: 0.39355098463499744
+metrics/val/auc_macro_ovr: 0.39795241440971424
+metrics/val/auc_weighted_ovo: 0.3918000213713446
+metrics/val/auc_weighted_ovr: 0.4412535811084915
+metrics/val/bacc: 0.16666666666666666
+metrics/val/f1_macro: 0.09832841691248771
+metrics/val/f1_micro: 0.411522633744856
+metrics/val/f1_weighted: 0.24278621459873506
+New best auc_macro_ovo score (0.3936)
+Save checkpoint to: C:/Users/user/Desktop/楷备\MUSE\output/251020-080251-padufes-y-mml_v19\models\best.ckpt
+Load checkpoint from: C:/Users/user/Desktop/楷备\MUSE\output/251020-080251-padufes-y-mml_v19\models\best.ckpt
+-------final test-------
+metrics/final_test/acc: 0.41133864541832654
+metrics/final_test/acc_std: 0.030387069259650925
+metrics/final_test/auc_macro_ovo: 0.4525367293439597
+metrics/final_test/auc_macro_ovo_std: 0.029497506180100278
+metrics/final_test/auc_macro_ovr: 0.44952735894548856
+metrics/final_test/auc_macro_ovr_std: 0.02890300804036305
+metrics/final_test/auc_weighted_ovo: 0.4379329582722911
+metrics/final_test/auc_weighted_ovo_std: 0.029301311002837654
+metrics/final_test/auc_weighted_ovr: 0.43902533453231346
+metrics/final_test/auc_weighted_ovr_std: 0.02065808426380442
+metrics/final_test/bacc: 0.16504711826465182
+metrics/final_test/bacc_std: 0.0015924696460482136
+metrics/final_test/f1_macro: 0.09900935182440318
+metrics/final_test/f1_macro_std: 0.005096612765577449
+metrics/final_test/f1_micro: 0.41133864541832654
+metrics/final_test/f1_micro_std: 0.030387069259650925
+metrics/final_test/f1_weighted: 0.2476802989246629
+metrics/final_test/f1_weighted_std: 0.030628546799407977
+Save predictions to: C:/Users/user/Desktop/楷备\MUSE\output/251020-080251-padufes-y-mml_v19\predictions.txt

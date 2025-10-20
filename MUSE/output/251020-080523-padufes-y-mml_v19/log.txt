@@ -1,0 +1,70 @@
+dataset: padufes
+task: y
+monitor: auc_macro_ovo
+dev: True
+load_no_label: False
+embedding_size: 128
+code_pretrained_embedding: True
+code_layers: 2
+code_heads: 2
+bert_type: prajjwal1/bert-tiny
+rnn_layers: 1
+rnn_type: GRU
+rnn_bidirectional: False
+ffn_layers: 2
+gnn_layers: 2
+gnn_norm: None
+dropout: 0.25
+epochs: 1
+eval_every: 10
+batch_size: 8
+lr: 0.0002
+weight_decay: 0
+monitor_criterion: max
+seed: 42
+checkpoint: None
+no_train: False
+note: mml_v19
+exp_name_attr: ['dataset', 'task', 'note']
+official_run: True
+no_cuda: False
+exp_name: 251020-080523-padufes-y-mml_v19
+device: cuda
+Model: MMLBackbone with 24,018,374 params
+Number of parameters: 24018374
+-------train: 0-------
+metrics/train/loss: 4.744990896433592
+Save checkpoint to: C:/Users/user/Desktop/楷备\MUSE\output/251020-080523-padufes-y-mml_v19\models\last.ckpt
+-------val: 0-------
+metrics/val/acc: 0.41975308641975306
+metrics/val/auc_macro_ovo: 0.4734023332662371
+metrics/val/auc_macro_ovr: 0.4622364289118148
+metrics/val/auc_weighted_ovo: 0.4606811780580902
+metrics/val/auc_weighted_ovr: 0.47838949850220047
+metrics/val/bacc: 0.1784259259259259
+metrics/val/f1_macro: 0.13705787781350484
+metrics/val/f1_micro: 0.41975308641975306
+metrics/val/f1_weighted: 0.3096079287576251
+New best auc_macro_ovo score (0.4734)
+Save checkpoint to: C:/Users/user/Desktop/楷备\MUSE\output/251020-080523-padufes-y-mml_v19\models\best.ckpt
+Load checkpoint from: C:/Users/user/Desktop/楷备\MUSE\output/251020-080523-padufes-y-mml_v19\models\best.ckpt
+-------final test-------
+metrics/final_test/acc: 0.39613147410358557
+metrics/final_test/acc_std: 0.030637672715349423
+metrics/final_test/auc_macro_ovo: 0.45453361713084206
+metrics/final_test/auc_macro_ovo_std: 0.030056041783314252
+metrics/final_test/auc_macro_ovr: 0.442943286196687
+metrics/final_test/auc_macro_ovr_std: 0.035736693348963046
+metrics/final_test/auc_weighted_ovo: 0.4379056218115401
+metrics/final_test/auc_weighted_ovo_std: 0.03481729074952146
+metrics/final_test/auc_weighted_ovr: 0.4344414550894308
+metrics/final_test/auc_weighted_ovr_std: 0.022092964817243044
+metrics/final_test/bacc: 0.1632275586573028
+metrics/final_test/bacc_std: 0.007643639627613122
+metrics/final_test/f1_macro: 0.1165643685483936
+metrics/final_test/f1_macro_std: 0.009973529091906082
+metrics/final_test/f1_micro: 0.39613147410358557
+metrics/final_test/f1_micro_std: 0.030637672715349423
+metrics/final_test/f1_weighted: 0.2760383955947451
+metrics/final_test/f1_weighted_std: 0.03213261468061976
+Save predictions to: C:/Users/user/Desktop/楷备\MUSE\output/251020-080523-padufes-y-mml_v19\predictions.txt
