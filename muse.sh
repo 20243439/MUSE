@@ -27,6 +27,8 @@ Options:
 USAGE
 }
 
+source "C:/Users/user/Desktop/연구/missmodal/Scripts/activate"
+
 # Run
 ./missmodal/Scripts/python.exe main.py \
   --dataset padufes \
@@ -44,4 +46,21 @@ USAGE
   --monitor auc_macro_ovo \
   --monitor_criterion max \
   --note mml_v19
+
+./missmodal/Scripts/python.exe main.py \
+  --dataset yelp \
+  --dev \
+  --epochs 10 \
+  --batch_size 16 \
+  --eval_every 1 \
+  --log_mode minimal \
+  --lr 1e-4 \
+  --weight_decay 1e-5 \
+  --dropout 0.3 \
+  --ffn_layers 2 \
+  --gnn_layers 2 \
+  --seed 42 \
+  --monitor auc_macro_ovo \
+  --monitor_criterion max \
+  --note mml_yelp_dev
 

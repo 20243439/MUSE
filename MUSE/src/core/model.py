@@ -7,6 +7,7 @@ from adni_model import ADNIBackbone
 from eicu_model import eICUBackbone
 from mimic4_model import MIMIC4Backbone
 from padufes_model import PADUFESBackbone
+from yelp_model import YELPBackbone
 from src.metrics import get_metrics_binary, get_metrics_multiclass
 
 
@@ -65,6 +66,17 @@ class MMLBackbone(nn.Module):
                 gnn_norm=args.gnn_norm,
                 device=args.device,
                 num_classes=args.num_classes,
+            )
+        elif args.dataset == "yelp":
+            self.model = YELPBackbone(
+                embedding_size=args.embedding_size,
+                dropout=args.dropout,
+                ffn_layers=args.ffn_layers,
+                gnn_layers=args.gnn_layers,
+                gnn_norm=args.gnn_norm,
+                device=args.device,
+                num_classes=args.num_classes,
+                bert_type=args.bert_type,
             )
         self.optimizer = torch.optim.Adam(
             self.model.parameters(),

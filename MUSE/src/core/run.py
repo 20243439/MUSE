@@ -11,6 +11,7 @@ from src.dataset.adni_dataset import ADNIDataset
 from src.dataset.eicu_dataset import eICUDataset
 from src.dataset.mimic4_dataset import MIMIC4Dataset
 from src.dataset.padufes_dataset import PADUFESDataset
+from src.dataset.yelp_dataset import YELPDataset
 from src.dataset.utils import mimic4_collate_fn, eicu_collate_fn
 from src.helper import Helper
 from src.utils import count_parameters
@@ -85,15 +86,47 @@ def run_entry():
         collate_fn = None
         tokenizer = None
     elif args.dataset == "padufes":
-        train_set = PADUFESDataset(split="train", dev=args.dev, load_no_label=args.load_no_label)
-        val_set = PADUFESDataset(split="val")
-        test_set = PADUFESDataset(split="test")
+        # Create full splits; we'll handle dev subsampling proportionally below
+        train_set = PADUFESDataset(split="train", dev=False, load_no_label=args.load_no_label)
+        val_set = PADUFESDataset(split="val", dev=False)
+        test_set = PADUFESDataset(split="test", dev=False)
         # infer classes from dataset mapping
+        args.num_classes = len(train_set.label2idx)
+        collate_fn = None
+        tokenizer = None
+    elif args.dataset == "yelp":
+        # Create full splits; we'll handle dev subsampling proportionally below
+        train_set = YELPDataset(split="train", dev=False)
+        val_set = YELPDataset(split="val", dev=False)
+        test_set = YELPDataset(split="test", dev=False)
         args.num_classes = len(train_set.label2idx)
         collate_fn = None
         tokenizer = None
     else:
         raise ValueError("Dataset not supported!")
+
+    # If dev mode, proportionally subsample each split to preserve original ratio (e.g., ~8:1:1)
+    if args.dev:
+        from torch.utils.data import Subset
+        import math
+
+        n_train, n_val, n_test = len(train_set), len(val_set), len(test_set)
+        # Choose per-dataset caps for train (preserve existing speed expectations)
+        if args.dataset == "padufes":
+            cap_train = 512
+        elif args.dataset == "yelp":
+            cap_train = 2000
+        else:
+            cap_train = n_train
+
+        scale = min(1.0, cap_train / max(1, n_train))
+        new_n_train = min(n_train, int(math.floor(n_train * scale)))
+        new_n_val = min(n_val, max(1, int(math.floor(n_val * scale))))
+        new_n_test = min(n_test, max(1, int(math.floor(n_test * scale))))
+
+        train_set = Subset(train_set, list(range(new_n_train)))
+        val_set = Subset(val_set, list(range(new_n_val)))
+        test_set = Subset(test_set, list(range(new_n_test)))
 
     # Safer defaults for Windows when using multiprocessing
     import platform
@@ -133,6 +166,9 @@ def run_entry():
         logging.info(model)
     param_count = count_parameters(model)
     logging.info("Number of parameters: {}".format(param_count))
+    logging.info(
+        f"Dataset sizes: train={len(train_set)} val={len(val_set)} test={len(test_set)}"
+    )
     # Concise run summary for minimal console output
     logging.info(
         f"Run summary: model={model.model.__class__.__name__} dataset={args.dataset} "
