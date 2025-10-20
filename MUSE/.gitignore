@@ -1,3 +1,9 @@
+## Added by tooling to avoid large artifacts
+output/
+**/__pycache__/
+*.ckpt
+predictions.txt
+*.ipynb
 .idea/
 
 # Byte-compiled / optimized / DLL files
